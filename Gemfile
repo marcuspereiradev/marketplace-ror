@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
 
+gem 'mongoid'
+gem 'rails_admin'
+gem 'devise'
+gem 'kaminari-mongoid'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
