@@ -10,6 +10,7 @@ gem 'devise'
 gem 'kaminari-mongoid'
 gem 'httparty'
 gem 'slim'
+gem 'searchkick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

@@ -1,0 +1,10 @@
+header class="header"
+  div.container.header-content
+    h1 Marketplace
+
+    = form_tag(products_index_path , method: :get, class: "form-search") do |f| 
+      = text_field_tag :term,
+        params[:term],
+        autocomplete: :off,
+        placeholder: 'Buscar produto',
+        class: "search"

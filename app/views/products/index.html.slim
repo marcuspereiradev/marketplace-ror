@@ -1,0 +1,11 @@
+= render "header"
+section.container
+  div.products-content
+
+    - @products.each do |product|
+      div.thumbnail
+        a href = product.url
+          img src = product.image
+          p.product-name = product.name
+          span.product-price = number_to_currency_br(product.price)
+          span.product-installment  #{product.number_of_installments} x #{number_to_currency_br(product.installments)}
