@@ -1,24 +1,40 @@
-# README
+## About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a kind marketplace made with Ruby On Rails.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+1 - You must have installed mongodb
 
-* System dependencies
+```bash
+https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials
+```
 
-* Configuration
+2 - Clone the application and run inside the directory.
 
-* Database creation
+```bash
+bundle install
+```
 
-* Database initialization
+3 - Now you must to start mongodb in terminal and after start server
 
-* How to run the test suite
+```bash
+sudo service mongod start
+```
+```bash
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+For create a store/client and add some product you must sign up through rails admin
 
-* Deployment instructions
+```bash
+http://localhost:3000/admin
+```
 
-* ...
+When one client is save some products are added automatically by api but the field website added
+must be a VTEX store that use the same api endpoint. For example:
+
+https://www.fossil.com.br
+https://www.montecarlo.com.br/
+https://www.lojasmartex.com.br/
+https://loja.europa.com.br/
