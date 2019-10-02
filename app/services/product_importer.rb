@@ -1,6 +1,6 @@
 require 'httparty'
 
-class ProductImporter  
+class ProductImporter
   def self.import_products_from_client(client, page=1, from=0, to=49)
     return unless client.website.present?
 
@@ -18,8 +18,8 @@ class ProductImporter
         client_id: client.id,
         name: product['productName'],
         price: product['items'][0]['sellers'][0]['commertialOffer']['Price'],
-        installments: product['items'][0]['sellers'][0]['commertialOffer']['Installments'][9]['Value'],
-        number_of_installments: product['items'][0]['sellers'][0]['commertialOffer']['Installments'][9]['NumberOfInstallments'],
+        installments: product['items'][0]['sellers'][0]['commertialOffer']['Installments'].max_by{|item| item['NumberOfInstallments']}['Value'],
+        number_of_installments: product['items'][0]['sellers'][0]['commertialOffer']['Installments'].max_by{|item| item['NumberOfInstallments']}['NumberOfInstallments'],
         image: product['items'][0]['images'][0]['imageUrl'],
         url: product['link'],
       })
