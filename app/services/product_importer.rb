@@ -12,9 +12,11 @@ class ProductImporter
     response = HTTParty.get("#{client.website}/api/catalog_system/pub/products/search?_from=#{from}&_to=#{to}")
     products = JSON.parse(response.body)
 
+    return unless products.present? && products.length > 0
+
     products.each do |product|
       next unless product['items'][0]['sellers'][0]['commertialOffer']['Installments'].present?
-      Product.create!({
+      Product.create({
         client_id: client.id,
         name: product['productName'],
         price: product['items'][0]['sellers'][0]['commertialOffer']['Price'],
