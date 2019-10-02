@@ -9,6 +9,7 @@ class Product
   field :url, type: String
 
   belongs_to :client
+  validates :name, uniqueness: true
 
   searchkick
 end
