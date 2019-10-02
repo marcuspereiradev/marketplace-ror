@@ -1,6 +1,6 @@
 ## About
 
-This is a kind marketplace made with Ruby On Rails.
+This is a marketplace made with Ruby On Rails.
 
 ## Getting Started
 
