@@ -4,7 +4,7 @@ production:
       uri: <%= ENV['MONGODB_URI'] %>
     options:
       # skip_version_check: true
-      database: marketplace_ror_development
+      database: marketplace_ror
       hosts:
         - localhost:27017
     safe: true
