@@ -1,12 +1,9 @@
 production:
   clients:
     default:
-      uri: <%= ENV['MONGODB_URI'] %>
+      uri: <%= ENV['MONGODB_URI'] || ENV['MONGO_URL'] %>
     options:
-      skip_version_check: true
-      database: marketplace_ror
-      hosts:
-        - localhost:27017
+      # skip_version_check: true
     safe: true
 
 development:
