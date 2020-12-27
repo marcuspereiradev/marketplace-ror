@@ -5,40 +5,54 @@
   flex-wrap: wrap;
 
   .thumbnail {
+    animation: mymove 1s;
     background-color: $custom-white;
+    border-bottom: 1px solid #d3d3d3;
     margin: 0 10px 20px 10px;
     text-align: center;
+    padding-bottom: 10px;
     width: calc(25% - 20px);
-
+    
     a {
       display: flex;
       flex-direction: column;
       height: 100%;
-    }
-    
-    img {
-      max-width: 100%;
-    }
 
-    .product-name {
-      color: $custom-dark;
-      flex: 1;
-      font-size: .875em;
-      line-height: 1.4em;
-      padding: 10px 0;
+      img {
+        max-width: 100%;
+      }
+  
+      .product-name {
+        color: $custom-dark;
+        flex: 1;
+        font-size: .875em;
+        line-height: 1.4em;
+        padding: 10px 0;
+      }
+  
+      .product-price {
+        color: $custom-red;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 1.4em;
+      }
+  
+      .product-installment {
+        color: $custom-red;
+        font-size: .875em;
+        line-height: 1.4em;
+      }
     }
+  }
 
-    .product-price {
-      color: $custom-red;
-      font-size: 1em;
-      font-weight: bold;
-      line-height: 1.4em;
+  @keyframes mymove {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
     }
-
-    .product-installment {
-      color: $custom-red;
-      font-size: .875em;
-      line-height: 1.4em;
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
