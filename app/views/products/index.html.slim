@@ -4,7 +4,7 @@ section.container
 
     - @products.each do |product|
       div.thumbnail
-        a href = product.url
+        = link_to  product.url, target: '_blank' 
           img src = product.image
           p.product-name = product.name
           span.product-price = number_to_currency_br(product.price)
