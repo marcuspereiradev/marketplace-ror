@@ -4,16 +4,20 @@
   background-color: $custom-dark;
   border-bottom: 1px solid;
   margin-bottom: 60px;
-  
+
   .header-content {
     display: flex;
     padding: 20px;
-  
-    h1 {
-      color: $custom-white;
+
+    .header-content__logo {
       flex: 1;
-      font-size: 3em;
+
+      h1 {
+        color: $custom-white;
+        font-size: 3em;
+      }
     }
+
 
     .form-search {
       align-self: center;
