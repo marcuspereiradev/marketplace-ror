@@ -11,7 +11,6 @@ gem 'kaminari-mongoid'
 gem 'httparty'
 gem 'slim'
 gem 'searchkick'
-gem 'rails_12factor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
