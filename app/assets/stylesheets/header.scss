@@ -41,8 +41,10 @@
     .header-content {
       flex-direction: column;
 
-      h1 {
-        align-self: center;
+      .header-content__logo {
+        h1 {
+          text-align: center;
+        }
       }
 
       .form-search {
