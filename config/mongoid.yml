@@ -1,3 +1,11 @@
+production:
+  clients:
+    default:
+      uri: mongodb+srv://usertest:usertest123456@marketplaceror.nqfvv.mongodb.net/marketplaceror?retryWrites=true&w=majority
+      options:
+        # consistency: :strong
+        # identity_map_enabled: true
+
 development:
   # Configure available database clients. (required)
   clients:
