@@ -3,7 +3,7 @@ development:
   clients:
     # Defines the default client. (required)
     default:
-      uri: <%= ENV['URI_FROM_MONGODB_ATLAS'] %>
+      uri: mongodb+srv://usertest:usertest123456@marketplaceror.nqfvv.mongodb.net/marketplaceror?retryWrites=true&w=majority
       # Mongoid can connect to a URI accepted by the driver:
       # uri: mongodb://user:password@mongodb.domain.com:27017/marketplace_ror_development
 
