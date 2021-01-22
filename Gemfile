@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.0'
 
 # Project specific Gems
+gem 'pg'
 gem 'mongoid'
 gem 'rails_admin'
 gem 'devise'

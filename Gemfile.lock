@@ -186,6 +186,9 @@ GEM
     nokogiri (1.10.4-x86-mingw32)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pg (1.2.3)
+    pg (1.2.3-x64-mingw32)
+    pg (1.2.3-x86-mingw32)
     public_suffix (4.0.1)
     puma (3.12.1)
     puma (3.12.1-java)
@@ -340,6 +343,7 @@ DEPENDENCIES
   kaminari-mongoid
   listen (>= 3.0.5, < 3.2)
   mongoid
+  pg
   puma (~> 3.11)
   rails (~> 5.2.3)
   rails_12factor
