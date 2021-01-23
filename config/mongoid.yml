@@ -1,7 +1,7 @@
 production:
   clients:
     default:
-      uri: mongodb+srv://usertest:usertest123456@marketplaceror.nqfvv.mongodb.net/marketplaceror?retryWrites=true&w=majority
+      uri: <%= ENV['URI_FROM_MONGODB_ATLAS'] %>
       options:
         # consistency: :strong
         # identity_map_enabled: true
