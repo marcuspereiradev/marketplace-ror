@@ -11,5 +11,5 @@ class Product
   belongs_to :client
   validates :name, uniqueness: true
 
-  searchkick
+  # searchkick
 end
