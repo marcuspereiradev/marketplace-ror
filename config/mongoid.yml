@@ -1,6 +1,7 @@
 production:
   clients:
     default:
+      # This uri is in settings/Reveal Config Vars on Heroku
       uri: <%= ENV['URI_FROM_MONGODB_ATLAS'] %>
       options:
         # consistency: :strong
