@@ -1,22 +1,30 @@
+production:
+  clients:
+    default:
+      # This uri is settings/Reveal Config Vars in Heroku
+      uri: <%= ENV['URI_FROM_MONGODB_ATLAS'] %>
+      options:
+        # consistency: :strong
+        # identity_map_enabled: true
+
 development:
   # Configure available database clients. (required)
   clients:
     # Defines the default client. (required)
     default:
-      uri: <%= ENV['URI_FROM_MONGODB_ATLAS'] %>
       # Mongoid can connect to a URI accepted by the driver:
       # uri: mongodb://user:password@mongodb.domain.com:27017/marketplace_ror_development
 
       # Otherwise define the parameters separately.
       # This defines the name of the default database that Mongoid can connect to.
       # (required).
-      # database: marketplace_ror_development
+      database: marketplace_ror_development
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
-      # hosts:
-      #   - localhost:27017
+      hosts:
+        - localhost:27017
       options:
-        server_selection_timeout: 15
+        server_selection_timeout: 5
         # Note that all options listed below are Ruby driver client options (the mongo gem).
         # Please refer to the driver documentation of the version of the mongo gem you are using
         # for the most up-to-date list of options.
