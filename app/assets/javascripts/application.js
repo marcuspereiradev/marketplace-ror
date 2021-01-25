@@ -14,7 +14,7 @@
 //= require turbolinks
 //= require_tree .
 
-window.addEventListener("load", () => {
+window.addEventListener("load", function() {
   var mybutton = document.getElementById("myBtn");
 
   // When the user scrolls down 20px from the top of the document, show the button
