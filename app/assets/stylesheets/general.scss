@@ -2,12 +2,33 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lora', serif;
 }
 
 .container {
   margin: 0 auto;
-  padding: 0;
+  padding: 0 30px;
   max-width: 1199.98px;
 }
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: -3px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+  img {
+    max-width: 36px;
+  }
+}
+

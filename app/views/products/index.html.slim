@@ -4,8 +4,11 @@ section.container
 
     - @products.each do |product|
       div.thumbnail
-        = link_to  product.url, target: '_blank' 
+        = link_to  product.url, target: '_blank'
           img src = product.image
           p.product-name = product.name
           span.product-price = number_to_currency_br(product.price)
           span.product-installment  #{product.number_of_installments} x #{number_to_currency_br(product.installments)}
+
+button#myBtn(title="Go to top")
+  img src="/assets/arrow.png" alt="arrow"/
