@@ -1,6 +1,6 @@
 header class="header"
   div.container.header-content
-    = link_to  products_index_url, class: "header-content__logo" do
+    = link_to  root_path, class: "header-content__logo" do
       h1 Marketplace
 
     = form_tag(products_index_path , method: :get, class: "form-search") do |f|
