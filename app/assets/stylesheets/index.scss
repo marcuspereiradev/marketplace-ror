@@ -1,0 +1,16 @@
+@import './custom_colors';
+
+.select-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+
+  #products-order-select {
+    background: $custom-dark;
+    color: $custom-white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    cursor: pointer;
+  }
+}

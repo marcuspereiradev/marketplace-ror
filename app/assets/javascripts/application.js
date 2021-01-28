@@ -14,7 +14,7 @@
 //= require turbolinks
 //= require_tree .
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   var mybutton = document.getElementById("myBtn");
 
   // When the user scrolls down 20px from the top of the document, show the button
@@ -41,3 +41,43 @@ window.addEventListener("load", function() {
     document.documentElement.scrollTop = 0;
   }
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const list = document.getElementById("products-order-select");
+
+//   list.addEventListener("change", getSelectValue, false);
+
+//   function getSelectValue(event) {
+//     console.log(list.value);
+//     const url = new URL(document.URL);
+//     const params = { option_selected: list.value };
+
+//     url.search = new URLSearchParams(params).toString();
+
+//     fetch(url)
+//       .then((response) => response.text())
+//       .then((html) => (document.body.innerHTML = html))
+//       .catch((err) => console.error(err));
+//   }
+// });
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    const selectBox = document.getElementById("products-order-select");
+
+    selectBox.addEventListener("change", setOptionToSessionStorage, false);
+
+    function setOptionToSessionStorage() {
+      sessionStorage.setItem("products-order-select:option", this.value);
+    }
+
+    const optionSelected = sessionStorage.getItem("products-order-select:option");
+
+    if (!!optionSelected) selectBox.value = optionSelected;
+
+    sessionStorage.removeItem("products-order-select:option");
+  },
+  false
+);
