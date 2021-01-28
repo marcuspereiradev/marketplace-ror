@@ -63,8 +63,7 @@ window.addEventListener("load", function () {
 
 document.addEventListener(
   "DOMContentLoaded",
-  () => {
-
+  function () {
     const selectBox = document.getElementById("products-order-select");
 
     selectBox.addEventListener("change", setOptionToSessionStorage, false);
@@ -73,7 +72,9 @@ document.addEventListener(
       sessionStorage.setItem("products-order-select:option", this.value);
     }
 
-    const optionSelected = sessionStorage.getItem("products-order-select:option");
+    const optionSelected = sessionStorage.getItem(
+      "products-order-select:option"
+    );
 
     if (!!optionSelected) selectBox.value = optionSelected;
 
