@@ -24,6 +24,7 @@ class ProductImporter
         number_of_installments: product['items'][0]['sellers'][0]['commertialOffer']['Installments'].max_by{|item| item['NumberOfInstallments']}['NumberOfInstallments'],
         image: product['items'][0]['images'][0]['imageUrl'],
         url: product['link'],
+        gender: product['Gênero']
       })
     end
 
