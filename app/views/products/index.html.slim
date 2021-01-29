@@ -1,5 +1,5 @@
 = render "header"
-section.container
+section.container.products-container
   div.select-container
     = form_tag( products_index_path , remote: true, method: :get) do
       select#products-order-select name="products_order_select" onChange="this.form.submit()"

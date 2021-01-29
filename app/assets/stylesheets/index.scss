@@ -1,16 +1,100 @@
 @import './custom_colors';
 
-.select-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
+.products-container {
+  flex: 1;
 
-  #products-order-select {
-    background: $custom-dark;
-    color: $custom-white;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-    border: none;
-    cursor: pointer;
+  .select-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    #products-order-select {
+      background: $custom-dark;
+      color: $custom-white;
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .products-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .thumbnail {
+      animation: mymove 1s;
+      background-color: $custom-white;
+      border-bottom: 1px solid $custom-grey;
+      margin: 0 10px 20px 10px;
+      text-align: center;
+      padding-bottom: 10px;
+      width: calc(25% - 20px);
+      transition: .3s;
+
+      &:hover {
+        opacity: .9;
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        img {
+          max-width: 100%;
+        }
+
+        .product-name {
+          color: $custom-dark;
+          flex: 1;
+          font-size: .875em;
+          line-height: 1.4em;
+          padding: 10px 0;
+        }
+
+        .product-price {
+          color: $custom-red;
+          font-size: 1em;
+          font-weight: bold;
+          line-height: 1.4em;
+        }
+
+        .product-installment {
+          color: $custom-red;
+          font-size: .875em;
+          line-height: 1.4em;
+        }
+      }
+    }
+
+    @keyframes mymove {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .thumbnail {
+        width: calc(33.333% - 20px);
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .thumbnail {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .thumbnail {
+        width: calc(100% - 20px);
+      }
+    }
   }
 }
