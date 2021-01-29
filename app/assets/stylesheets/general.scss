@@ -1,13 +1,19 @@
+@import './custom_colors';
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   font-family: 'Lora', serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
