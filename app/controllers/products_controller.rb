@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
     if params[:term].present?
       @products = Product.where(name: /#{params[:term]}/i)
       # @products = Product.search("%#{params[:term]}%") This line just work in development. Elasticsearch
+      flash.now[:notice] = "Nenhum registro encontrado" if @products.empty?
     elsif params[:products_order_select].present? && params[:products_order_select] == 'biggest_price'
       @products = Product.biggest_price
     elsif params[:products_order_select].present? && params[:products_order_select] == 'lowest_price'

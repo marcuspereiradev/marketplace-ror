@@ -1,13 +1,14 @@
 section.container.products-container
-  div.select-container
-    = form_tag( products_index_path , remote: true, method: :get) do
-      select#products-order-select name="products_order_select" onChange="this.form.submit()"
-        option selected="selected" Ordenar por
-        option value="female" Feminino
-        option value="male" Masculino
-        option value="unissex" Unissex
-        option value="lowest_price" Menor preço
-        option value="biggest_price" Maior preço
+  - if @products.present?
+    div.select-container
+      = form_tag( products_index_path , remote: true, method: :get) do
+        select#products-order-select name="products_order_select" onChange="this.form.submit()"
+          option selected="selected" Ordenar por
+          option value="female" Feminino
+          option value="male" Masculino
+          option value="unissex" Unissex
+          option value="lowest_price" Menor preço
+          option value="biggest_price" Maior preço
 
   div.products-content
 

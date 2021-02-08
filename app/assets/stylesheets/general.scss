@@ -20,6 +20,7 @@ body {
   margin: 0 auto;
   padding: 0 30px;
   max-width: 1199.98px;
+  width: 100%;
 }
 
 #myBtn {
@@ -36,4 +37,13 @@ body {
   img {
     max-width: 30px;
   }
+}
+
+.notice {
+  text-align: center;
+  background: $custom-bg-notice;
+  border: 1px solid $custom-border-notice;
+  padding: 15px 0;
+  color: $custom-dark;
+  margin-bottom: 10px;
 }

@@ -13,6 +13,9 @@
 
   <body>
     <%= render '/shared/header' %>
+    <div class="container">
+      <%= render '/shared/flash_messages' %>
+    </div>
     <%= yield %>
     <%= render '/shared/footer' %>
   </body>
