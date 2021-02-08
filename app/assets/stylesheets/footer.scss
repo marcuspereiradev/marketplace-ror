@@ -1,11 +1,11 @@
 @import '../stylesheets/custom_colors';
 
 #footer {
-  // border-top: solid 1px $custom-grey;
   color: $custom-grey;
   text-align: center;
   padding: 10px 0;
   background: $custom-dark;
+  font-size: .875em;
 
   a {
     color: $custom-grey;
